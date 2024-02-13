@@ -6,14 +6,14 @@
 /*   By: gbrunet <gbrunet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 09:40:48 by gbrunet           #+#    #+#             */
-/*   Updated: 2024/02/13 12:07:17 by gbrunet          ###   ########.fr       */
+/*   Updated: 2024/02/13 09:35:23 by gbrunet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 #include <iostream>
 
-ScavTrap::ScavTrap(): ClapTrap() {
+ScavTrap::ScavTrap(std::string name): ClapTrap(name) {
 	std::cout << "ScavTrap: Default constructor called" << std::endl;
 	this->_hit = 100;
 	this->_energy = 50;
@@ -21,25 +21,17 @@ ScavTrap::ScavTrap(): ClapTrap() {
 	this->gate_keeper_mode = false;
 }
 
-ScavTrap::ScavTrap(std::string name): ClapTrap(name) {
-	std::cout << "ScavTrap: Default constructor with name " << name << " called" << std::endl;
-	this->_hit = 100;
-	this->_energy = 50;
-	this->_attack = 20;
-	this->gate_keeper_mode = false;
-}
-
 ScavTrap::ScavTrap(const ScavTrap &cpy): ClapTrap(cpy) {
-	std::cout << "ScavTrap: Copy constructor for " << cpy.name << " called" << std::endl;
+	std::cout << "ScavTrap: Copy constructor called" << std::endl;
 	*this = cpy;
 }
 
 ScavTrap::~ScavTrap() {
-	std::cout << "ScavTrap: Destructor for " << this->name << " called" << std::endl;
+	std::cout << "ScavTrap: Destructor called" << std::endl;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &rhs) {
-	std::cout << "ScavTrap: Copy assignment operator for " << rhs.name << " called" << std::endl;
+	std::cout << "ScavTrap: Copy assignment operator called" << std::endl;
 	if (this == &rhs)
 		return (*this);
 	this->name = rhs.name;
