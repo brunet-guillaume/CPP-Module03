@@ -6,31 +6,38 @@
 /*   By: gbrunet <gbrunet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 09:40:48 by gbrunet           #+#    #+#             */
-/*   Updated: 2024/02/13 09:36:36 by gbrunet          ###   ########.fr       */
+/*   Updated: 2024/02/13 13:25:22 by gbrunet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 #include <iostream>
 
-FragTrap::FragTrap(std::string name): ClapTrap(name) {
+FragTrap::FragTrap(): ClapTrap() {
 	std::cout << "FragTrap: Default constructor called" << std::endl;
 	this->_hit = 100;
 	this->_energy = 100;
 	this->_attack = 30;
 }
 
+FragTrap::FragTrap(std::string name): ClapTrap(name) {
+	std::cout << "FragTrap: Default constructor with name " << name << " called" << std::endl;
+	this->_hit = 100;
+	this->_energy = 100;
+	this->_attack = 30;
+}
+
 FragTrap::FragTrap(const FragTrap &cpy): ClapTrap(cpy) {
-	std::cout << "FragTrap: Copy constructor called" << std::endl;
+	std::cout << "FragTrap: Copy constructor for " << cpy.name << " called" << std::endl;
 	*this = cpy;
 }
 
 FragTrap::~FragTrap() {
-	std::cout << "FragTrap: Destructor called" << std::endl;
+	std::cout << "FragTrap: Destructor for " << this->name << " called" << std::endl;
 }
 
 FragTrap	&FragTrap::operator=(const FragTrap &rhs) {
-	std::cout << "FragTrap: Copy assignment operator called" << std::endl;
+	std::cout << "FragTrap: Copy assignment operator for " << rhs.name << " called" << std::endl;
 	if (this == &rhs)
 		return (*this);
 	this->name = rhs.name;

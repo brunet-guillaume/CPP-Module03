@@ -6,7 +6,7 @@
 /*   By: gbrunet <gbrunet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 16:31:49 by gbrunet           #+#    #+#             */
-/*   Updated: 2024/02/13 11:04:01 by gbrunet          ###   ########.fr       */
+/*   Updated: 2024/02/13 13:26:44 by gbrunet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,13 @@
 
 class FragTrap : virtual public ClapTrap {
 	public:
+		FragTrap();
 		FragTrap(std::string name);
 		FragTrap(const FragTrap &cpy);
-		~FragTrap();
 
 		FragTrap	&operator=(const FragTrap &rhs);
+		
+		~FragTrap();
 
 		void	attack(const std::string &target);
 		void	highFivesGuys(void);

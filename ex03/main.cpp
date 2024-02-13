@@ -6,7 +6,7 @@
 /*   By: gbrunet <gbrunet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 16:31:41 by gbrunet           #+#    #+#             */
-/*   Updated: 2024/02/13 11:45:23 by gbrunet          ###   ########.fr       */
+/*   Updated: 2024/02/13 13:50:36 by gbrunet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@
 #include <iostream>
 
 int	main(void) {
-	DiamondTrap ok("ok");
+	DiamondTrap ok;
 	ok.whoAmI();
+	ok.attack("test");
 	/*
 	ScavTrap a("Mr ScavTrap");
 	ScavTrap b(a);

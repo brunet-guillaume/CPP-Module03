@@ -6,7 +6,7 @@
 #    By: gbrunet <gbrunet@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/09 16:28:47 by gbrunet           #+#    #+#              #
-#    Updated: 2024/02/13 11:23:22 by gbrunet          ###   ########.fr        #
+#    Updated: 2024/02/13 14:07:21 by gbrunet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = ex03
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -Wno-shadow
 
 SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 

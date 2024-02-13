@@ -6,32 +6,40 @@
 /*   By: gbrunet <gbrunet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 09:40:48 by gbrunet           #+#    #+#             */
-/*   Updated: 2024/02/13 11:51:02 by gbrunet          ###   ########.fr       */
+/*   Updated: 2024/02/13 14:05:08 by gbrunet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 #include <iostream>
 
-DiamondTrap::DiamondTrap(std::string name): ClapTrap(name) {
+DiamondTrap::DiamondTrap(): ClapTrap("default_clap_name") {
 	std::cout << "DiamondTrap: Default constructor called" << std::endl;
-	this->name = name;
-	this->_hit = FragTrap::_hit;
-	this->_energy = ScavTrap::_energy;
-	this->_attack = FragTrap::_attack;
+	this->name = "default";
+	this->_hit = 100;
+	this->_energy = 50;
+	this->_attack = 30;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &cpy): ClapTrap(cpy), FragTrap(cpy), ScavTrap(cpy) {
-	std::cout << "DiamondTrap: Copy constructor called" << std::endl;
+DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name") {
+	std::cout << "DiamondTrap: Default constructor with name " << name << " called" << std::endl;
+	this->name = name;
+	this->_hit = 100;
+	this->_energy = 50;
+	this->_attack = 30;
+}
+
+DiamondTrap::DiamondTrap(const DiamondTrap &cpy): ClapTrap(cpy), ScavTrap(cpy), FragTrap(cpy) {
+	std::cout << "DiamondTrap: Copy constructor for " << cpy.name << " called" << std::endl;
 	*this = cpy;
 }
 
 DiamondTrap::~DiamondTrap() {
-	std::cout << "DiamondTrap: Destructor called" << std::endl;
+	std::cout << "DiamondTrap: Destructor for " << this->name << " called" << std::endl;
 }
 
 DiamondTrap	&DiamondTrap::operator=(const DiamondTrap &rhs) {
-	std::cout << "DiamondTrap: Copy assignment operator called" << std::endl;
+	std::cout << "DiamondTrap: Copy assignment operator for " << rhs.name << " called" << std::endl;
 	if (this == &rhs)
 		return (*this);
 	this->name = rhs.name;
@@ -42,5 +50,5 @@ DiamondTrap	&DiamondTrap::operator=(const DiamondTrap &rhs) {
 }
 
 void	DiamondTrap::whoAmI(void) {
-	std::cout << this->_hit << "  " << this->_energy << "  " << this->_attack << std::endl;
+	std::cout << "\e[0;34mMy name is " << this->name << " and the ClapTrap name is " << this->ClapTrap::name << "\e[0m" << std::endl;
 }
