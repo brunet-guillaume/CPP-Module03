@@ -6,7 +6,7 @@
 /*   By: gbrunet <gbrunet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 16:31:41 by gbrunet           #+#    #+#             */
-/*   Updated: 2024/02/13 13:50:36 by gbrunet          ###   ########.fr       */
+/*   Updated: 2024/02/14 11:02:59 by gbrunet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,28 +16,28 @@
 #include <iostream>
 
 int	main(void) {
-	DiamondTrap ok;
-	ok.whoAmI();
-	ok.attack("test");
-	/*
-	ScavTrap a("Mr ScavTrap");
-	ScavTrap b(a);
-	ScavTrap c("Mrs ScavTrap");
-	ScavTrap d = c;
-	FragTrap e("Mr FragTrap");
-	FragTrap f(e);
-	FragTrap g("Mrs FragTrap");
-	FragTrap h = g;
+	DiamondTrap a;
+	DiamondTrap b("Mrs DiamondTrap");
+	DiamondTrap c(b);
+	DiamondTrap d("Mr DiamondTrap");
+	DiamondTrap e = d;
 
 	std::cout << "a: ";
+	a.whoAmI();
 	a.attack("some random guy");
 	std::cout << "b: ";
+	b.whoAmI();
 	b.attack("some random guy");
 	std::cout << "c: ";
+	c.whoAmI();
 	c.attack("some random guy");
 	std::cout << "d: ";
+	d.whoAmI();
 	d.attack("some random guy");
-
+	std::cout << "e: ";
+	e.whoAmI();
+	e.attack("some random guy");
+	
 	std::cout << "a: ";
 	a.takeDamage(30);
 	std::cout << "b: ";
@@ -46,6 +46,8 @@ int	main(void) {
 	c.takeDamage(70);
 	std::cout << "d: ";
 	d.takeDamage(120);
+	std::cout << "e: ";
+	e.takeDamage(90);
 
 	std::cout << "a: ";
 	a.attack("some random guy");
@@ -61,6 +63,8 @@ int	main(void) {
 	c.attack("some random guy");
 	std::cout << "d: ";
 	d.attack("some random guy");
+	std::cout << "e: ";
+	e.attack("some random guy");
 
 	std::cout << "a: ";
 	a.takeDamage(50);
@@ -110,95 +114,16 @@ int	main(void) {
 	std::cout << "b: ";
 	b.guardGate();
 	std::cout << "b: ";
-	b.guardGate();
+	b.highFivesGuys();
 	std::cout << "b: ";
-	b.guardGate();
+	b.highFivesGuys();
 
+	std::cout << "c: ";
+	c.attack("some random guy");
+	std::cout << "d: ";
+	d.attack("some random guy");
+	std::cout << "e: ";
+	e.attack("some random guy");
 
-	std::cout << "e: ";
-	e.attack("some random guy");
-	std::cout << "f: ";
-	f.attack("some random guy");
-	std::cout << "g: ";
-	g.attack("some random guy");
-	std::cout << "h: ";
-	h.attack("some random guy");
-
-	std::cout << "e: ";
-	e.takeDamage(30);
-	std::cout << "f: ";
-	f.takeDamage(50);
-	std::cout << "g: ";
-	g.takeDamage(70);
-	std::cout << "h: ";
-	h.takeDamage(120);
-
-	std::cout << "e: ";
-	e.attack("some random guy");
-	std::cout << "e: ";
-	e.attack("some random guy");
-	std::cout << "e: ";
-	e.attack("some random guy");
-	std::cout << "e: ";
-	e.attack("some random guy");
-	std::cout << "f: ";
-	f.attack("some random guy");
-	std::cout << "g: ";
-	g.attack("some random guy");
-	std::cout << "h: ";
-	h.attack("some random guy");
-
-	std::cout << "e: ";
-	e.takeDamage(50);
-	std::cout << "e: ";
-	e.beRepaired(40);
-	std::cout << "e: ";
-	e.takeDamage(50);
-	std::cout << "e: ";
-	e.beRepaired(80);
-	std::cout << "e: ";
-	e.takeDamage(50);
-	std::cout << "e: ";
-	e.beRepaired(40);
-	std::cout << "e: ";
-	e.takeDamage(50);
-	std::cout << "e: ";
-	e.beRepaired(40);
-	std::cout << "e: ";
-	e.takeDamage(50);
-	std::cout << "e: ";
-	e.beRepaired(40);
-	std::cout << "e: ";
-	e.takeDamage(50);
-	std::cout << "e: ";
-	e.beRepaired(40);
-	std::cout << "e: ";
-	e.beRepaired(40);
-	std::cout << "e: ";
-	e.attack("some random guy");
-	std::cout << "e: ";
-	e.takeDamage(50);
-	std::cout << "e: ";
-	e.attack("some random guy");
-	for (int i = 0; i < 90; i++) {
-		std::cout << "e: ";
-		e.attack("some random guy");
-	}
-	std::cout << "e: ";
-	e.beRepaired(40);
-	std::cout << "e: ";
-	e.takeDamage(50);
-	std::cout << "e: ";
-	e.beRepaired(40);
-
-	std::cout << "e: ";
-	e.highFivesGuys();
-	std::cout << "f: ";
-	f.highFivesGuys();
-	std::cout << "f: ";
-	f.takeDamage(123);
-	std::cout << "f: ";
-	f.highFivesGuys();
-*/
 	return(0);
 }
