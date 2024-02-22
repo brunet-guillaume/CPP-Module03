@@ -6,7 +6,7 @@
 /*   By: gbrunet <gbrunet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 16:31:41 by gbrunet           #+#    #+#             */
-/*   Updated: 2024/02/14 11:02:59 by gbrunet          ###   ########.fr       */
+/*   Updated: 2024/02/22 08:53:32 by gbrunet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ int	main(void) {
 	a.takeDamage(50);
 	std::cout << "a: ";
 	a.attack("some random guy");
-	for (int i = 0; i < 40; i++) {
+	for (int i = 0; i < 100; i++) {
 		std::cout << "a: ";
 		a.attack("some random guy");
 	}

@@ -6,7 +6,7 @@
 /*   By: gbrunet <gbrunet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 09:40:48 by gbrunet           #+#    #+#             */
-/*   Updated: 2024/02/13 14:05:08 by gbrunet          ###   ########.fr       */
+/*   Updated: 2024/02/22 09:00:19 by gbrunet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,6 @@ DiamondTrap::~DiamondTrap() {
 
 DiamondTrap	&DiamondTrap::operator=(const DiamondTrap &rhs) {
 	std::cout << "DiamondTrap: Copy assignment operator for " << rhs.name << " called" << std::endl;
-	if (this == &rhs)
-		return (*this);
 	this->name = rhs.name;
 	this->_hit = rhs._hit;
 	this->_energy = rhs._energy;

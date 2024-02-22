@@ -6,7 +6,7 @@
 /*   By: gbrunet <gbrunet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 09:40:48 by gbrunet           #+#    #+#             */
-/*   Updated: 2024/02/13 13:25:22 by gbrunet          ###   ########.fr       */
+/*   Updated: 2024/02/22 08:41:45 by gbrunet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,6 @@ FragTrap::~FragTrap() {
 
 FragTrap	&FragTrap::operator=(const FragTrap &rhs) {
 	std::cout << "FragTrap: Copy assignment operator for " << rhs.name << " called" << std::endl;
-	if (this == &rhs)
-		return (*this);
 	this->name = rhs.name;
 	this->_hit = rhs._hit;
 	this->_energy = rhs._energy;
